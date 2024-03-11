@@ -1,7 +1,29 @@
-﻿    
-    @{
-        ViewBag.Title = "Home";
+﻿@model IEnumerable<Asp.net_mvc_2.Models.Students>
+@{
+    ViewBag.Title = "Home";
+}
+
+<table class="table table-active">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Last name</th>
+        <th>Age</th>
+        <th>Task</th>
+    </tr>
+
+    @foreach (var StudentsList in Model)
+    {
+        <tr>
+            <td>@StudentsList.StudentId</td>
+            <td>@StudentsList.StudentName</td>
+            <td>@StudentsList.StudentFamily</td>
+            <td>@StudentsList.StudentAge</td>
+            <td>
+                <a href="/Home/UpgradeUser" class="btn btn-warning">Edit</a>
+                <a href="/Home/DeleteUser" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
     }
-
-
+</table>
 

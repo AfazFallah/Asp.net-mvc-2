@@ -1,16 +1,9 @@
-﻿    @model Asp.net_mvc_2.Models.Students
-
-    <table class="table table-active">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Last name</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>@Model.StudentId</td>
-            <td>@Model.StudentName</td>
-            <td>@Model.StudentFamily</td>
-            <td>@Model.StudentAge</td>
-        </tr>
-    </table>
+﻿
+<link href="~/Content/Site.css" rel="stylesheet" />
+<form method="post">
+    <input type="text" name="firstname" class=" form-control" placeholder="enter name" />
+    <input type="text" name="lastname" class="form-control" placeholder="enter Last name" />
+    <input type="tel" name="phonenumber" class="form-control" placeholder="enter phonenumber" />
+    <br /><br/>
+    <input type="submit" class="btn btn-success" style="margin-left : 600px;" placeholder="submit" />
+</form>
